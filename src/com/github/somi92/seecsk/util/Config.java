@@ -6,6 +6,7 @@
 package com.github.somi92.seecsk.util;
 
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Properties;
@@ -24,14 +25,7 @@ public class Config {
     private static Config INSTANCA;
     
     private Config() {
-        try {
-            props = new Properties();
-            fis = new FileInputStream("config.properties");
-//            fos = new FileOutputStream("config.properties");
-            props.load(fis);
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
+        props = new Properties();
     }
     
     public static Config vratiInstancu() {
@@ -42,15 +36,24 @@ public class Config {
     }
     
     public String vratiVrednost(String kljuc) {
+        try {
+            fis = new FileInputStream("config.properties");
+            props.load(fis);
+        } catch (FileNotFoundException ex) {
+            ex.printStackTrace();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
         return props.getProperty(kljuc);
     }
     
-//    public void postaviVrednost(String kljuc, Object vrednost) {
-//        try {
-//            props.put(kljuc, vrednost);
-//            props.store(fos, null);
-//        } catch (IOException ex) {
-//            ex.printStackTrace();
-//        }
-//    }
+    public void postaviVrednost(String kljuc, Object vrednost) {
+        try {
+            fos = new FileOutputStream("config.properties");
+            props.put(kljuc, vrednost);
+            props.store(fos, null);
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+    }
 }

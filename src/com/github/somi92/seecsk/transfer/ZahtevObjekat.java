@@ -5,7 +5,10 @@
  */
 package com.github.somi92.seecsk.transfer;
 
+import com.github.somi92.seecsk.domain.Uplata;
+import com.github.somi92.seecsk.util.SistemskeOperacije;
 import java.io.Serializable;
+import java.util.List;
 
 /**
  *
@@ -13,23 +16,26 @@ import java.io.Serializable;
  */
 public class ZahtevObjekat implements Serializable {
     
-    private String imeOperacije;
+    private SistemskeOperacije sistemskaOperacija;
     private Object parametar;
+    private List<String> kriterijumPretrage;
+    private boolean ucitajListe;
+    private List<Uplata> uplateZaBrisanje;
 
     public ZahtevObjekat() {
     }
 
-    public ZahtevObjekat(String sifraOperacije, Object parametar) {
-        this.imeOperacije = sifraOperacije;
+    public ZahtevObjekat(SistemskeOperacije so, Object parametar) {
+        this.sistemskaOperacija = so;
         this.parametar = parametar;
     }
     
-    public String getImeOperacije() {
-        return imeOperacije;
+    public SistemskeOperacije getSistemskaOperacija() {
+        return sistemskaOperacija;
     }
 
-    public void setImeOperacije(String imeOperacije) {
-        this.imeOperacije = imeOperacije;
+    public void setSistemskaOperacija(SistemskeOperacije sistemskaOperacija) {
+        this.sistemskaOperacija = sistemskaOperacija;
     }
 
     public <T> T getParametar() {
@@ -38,5 +44,29 @@ public class ZahtevObjekat implements Serializable {
 
     public <T> void setParametar(T parametar) {
         this.parametar = parametar;
+    }
+
+    public List<String> getKriterijumPretrage() {
+        return kriterijumPretrage;
+    }
+
+    public void setKriterijumPretrage(List<String> kriterijumPretrage) {
+        this.kriterijumPretrage = kriterijumPretrage;
+    }
+
+    public boolean isUcitajListe() {
+        return ucitajListe;
+    }
+
+    public void setUcitajListe(boolean ucitajListe) {
+        this.ucitajListe = ucitajListe;
+    }
+
+    public List<Uplata> getUplateZaBrisanje() {
+        return uplateZaBrisanje;
+    }
+
+    public void setUplateZaBrisanje(List<Uplata> uplateZaBrisanje) {
+        this.uplateZaBrisanje = uplateZaBrisanje;
     }
 }
