@@ -139,7 +139,7 @@ public class Zaposleni implements Serializable {
 
     @Override
     public String toString() {
-        return "Zaposleni{" + "idZaposleni=" + idZaposleni + ", imePrezime=" + imePrezime + '}';
+        return "Zaposleni{" + "idZaposleni=" + idZaposleni + ", imePrezime=" + imePrezime + ", email=" + email + ", brojTel=" + brojTel + ", korisnickoIme=" + korisnickoIme + ", sifra=" + sifra + '}';
     }
     
     
