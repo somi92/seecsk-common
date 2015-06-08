@@ -5,11 +5,13 @@
  */
 package com.github.somi92.seecsk.util;
 
+import java.io.Serializable;
+
 /**
  *
  * @author milos
  */
-public class Ref<T> {
+public class Ref<T> implements Serializable {
     
     private T ref;
     

@@ -9,6 +9,7 @@ import com.github.somi92.sqldbb.annotations.Column;
 import com.github.somi92.sqldbb.annotations.ForeignKey;
 import com.github.somi92.sqldbb.annotations.PrimaryKey;
 import com.github.somi92.sqldbb.annotations.Table;
+import java.io.Serializable;
 import java.util.Date;
 import java.util.Objects;
 
@@ -18,7 +19,7 @@ import java.util.Objects;
  */
 
 @Table("Uplata")
-public class Uplata {
+public class Uplata implements Serializable {
     
     @PrimaryKey("idClanarina")
     @ForeignKey(column = "idClanarina", referencingTable = "Clanarina", referencingColumn = "idClanarina", isCollectionItem = false)

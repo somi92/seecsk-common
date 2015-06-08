@@ -5,6 +5,7 @@
  */
 package com.github.somi92.seecsk.domain;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -13,7 +14,7 @@ import java.util.Objects;
  *
  * @author milos
  */
-public class Kategorija {
+public class Kategorija implements Serializable {
     
     private long idKategorija;
     private String nazivKategorije;

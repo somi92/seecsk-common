@@ -5,13 +5,14 @@
  */
 package com.github.somi92.seecsk.domain;
 
+import java.io.Serializable;
 import java.util.Objects;
 
 /**
  *
  * @author milos
  */
-public class AngazmanZaposlenog {
+public class AngazmanZaposlenog implements Serializable {
     
     private Grupa grupa;
     private Zaposleni zaposleni;

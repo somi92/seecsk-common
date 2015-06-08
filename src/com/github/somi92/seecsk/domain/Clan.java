@@ -10,6 +10,7 @@ import com.github.somi92.sqldbb.annotations.Column;
 import com.github.somi92.sqldbb.annotations.ForeignKey;
 import com.github.somi92.sqldbb.annotations.PrimaryKey;
 import com.github.somi92.sqldbb.annotations.Table;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -20,7 +21,7 @@ import java.util.List;
  */
 
 @Table("Clan")
-public class Clan {
+public class Clan implements Serializable {
     
     @PrimaryKey("idClan")
     private long idClan;

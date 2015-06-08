@@ -5,6 +5,10 @@
  */
 package com.github.somi92.seecsk.domain;
 
+import com.github.somi92.sqldbb.annotations.Column;
+import com.github.somi92.sqldbb.annotations.PrimaryKey;
+import com.github.somi92.sqldbb.annotations.Table;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,14 +16,23 @@ import java.util.List;
  *
  * @author milos
  */
-public class Zaposleni {
+
+@Table("Zaposleni")
+public class Zaposleni implements Serializable {
     
+    @PrimaryKey("idZaposleni")
     private long idZaposleni;
+    @Column("imePrezime")
     private String imePrezime;
+    @Column("email")
     private String email;
+    @Column("brojTel")
     private String brojTel;
+    @Column("korisnickoIme")
     private String korisnickoIme;
+    @Column("sifra")
     private String sifra;
+    @Column("napomena")
     private String napomena;
     private List<AngazmanZaposlenog> angazmani;
 

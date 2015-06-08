@@ -10,6 +10,7 @@ import com.github.somi92.sqldbb.annotations.Column;
 import com.github.somi92.sqldbb.annotations.ForeignKey;
 import com.github.somi92.sqldbb.annotations.PrimaryKey;
 import com.github.somi92.sqldbb.annotations.Table;
+import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +21,7 @@ import java.util.Objects;
  */
 
 @Table("Trening")
-public class Trening {
+public class Trening implements Serializable {
     
     @PrimaryKey("idTrening")
     private long idTrening;

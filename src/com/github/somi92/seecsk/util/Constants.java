@@ -14,6 +14,7 @@ public interface Constants {
     public interface ServerConfigKeys {
         
         public static final String SERVER_PORT = "server_port";
+        public static final String SERVER_IP = "server_ip";
     }
     
     public interface DatabaseConfigKeys {

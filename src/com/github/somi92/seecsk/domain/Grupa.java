@@ -9,6 +9,7 @@ import com.github.somi92.sqldbb.annotations.Collection;
 import com.github.somi92.sqldbb.annotations.Column;
 import com.github.somi92.sqldbb.annotations.PrimaryKey;
 import com.github.somi92.sqldbb.annotations.Table;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +20,7 @@ import java.util.Objects;
  */
 
 @Table("Grupa")
-public class Grupa {
+public class Grupa implements Serializable {
     
     @PrimaryKey("idGrupa")
     private long idGrupa;
