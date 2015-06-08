@@ -49,4 +49,9 @@ public class OdgovorObjekat implements Serializable {
     public void setGreska(Exception greska) {
         this.greska = greska;
     }
+
+    @Override
+    public String toString() {
+        return "OdgovorObjekat{" + "podaci=" + podaci + ", statusOperacije=" + statusOperacije + ", greska=" + greska + '}';
+    }
 }

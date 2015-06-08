@@ -26,4 +26,9 @@ public class Ref<T> implements Serializable {
     public T get() {
         return ref;
     }
+
+    @Override
+    public String toString() {
+        return "Ref{" + "ref=" + ref + '}';
+    }
 }

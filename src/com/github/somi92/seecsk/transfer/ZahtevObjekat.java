@@ -69,4 +69,10 @@ public class ZahtevObjekat implements Serializable {
     public void setUplateZaBrisanje(List<Uplata> uplateZaBrisanje) {
         this.uplateZaBrisanje = uplateZaBrisanje;
     }
+
+    @Override
+    public String toString() {
+        return "ZahtevObjekat{" + "sistemskaOperacija=" + sistemskaOperacija + ", parametar=" + parametar + '}';
+    }
+    
 }
