@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.github.somi92.seecsk.domain;
+package com.github.somi92.seecskcommon.domain;
 
 import com.github.somi92.sqldbb.annotations.Column;
 import com.github.somi92.sqldbb.annotations.ForeignKey;
@@ -98,11 +98,4 @@ public class Prisustvo implements Serializable {
         }
         return true;
     }
-
-    @Override
-    public String toString() {
-        return "Prisustvo{" + "prisustvo=" + prisustvo + ", kasnjenjeMin=" + kasnjenjeMin + ", trening=" + trening + ", clan=" + clan + '}';
-    }
-    
-    
 }

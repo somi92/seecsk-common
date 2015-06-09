@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.github.somi92.seecsk.util;
+package com.github.somi92.seecskcommon.util;
 
 import java.io.Serializable;
 
@@ -25,10 +25,5 @@ public class Ref<T> implements Serializable {
     
     public T get() {
         return ref;
-    }
-
-    @Override
-    public String toString() {
-        return "Ref{" + "ref=" + ref + '}';
     }
 }

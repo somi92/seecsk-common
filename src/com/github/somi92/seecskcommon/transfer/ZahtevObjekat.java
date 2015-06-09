@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.github.somi92.seecsk.transfer;
+package com.github.somi92.seecskcommon.transfer;
 
-import com.github.somi92.seecsk.domain.Uplata;
-import com.github.somi92.seecsk.util.SistemskeOperacije;
+import com.github.somi92.seecskcommon.domain.Uplata;
+import com.github.somi92.seecskcommon.util.SistemskeOperacije;
 import java.io.Serializable;
 import java.util.List;
 

@@ -3,16 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.github.somi92.seecsk.domain;
+package com.github.somi92.seecskcommon.domain;
 
-import com.github.somi92.sqldbb.annotations.Collection;
 import com.github.somi92.sqldbb.annotations.Column;
 import com.github.somi92.sqldbb.annotations.ForeignKey;
 import com.github.somi92.sqldbb.annotations.PrimaryKey;
 import com.github.somi92.sqldbb.annotations.Table;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 import java.util.Objects;
 
 /**
@@ -35,7 +34,7 @@ public class Trening implements Serializable {
     @ForeignKey(column = "idGrupa", referencingTable = "Grupa", referencingColumn = "idGrupa", isCollectionItem = false)
     private Grupa grupa;
 //    @Collection(childEntityClass = Prisustvo.class, referencingField = "trening")
-    private List<Prisustvo> prisustva;
+    private ArrayList<Prisustvo> prisustva;
 
     public Trening() {
     }
@@ -88,11 +87,11 @@ public class Trening implements Serializable {
         this.grupa = grupa;
     }
 
-    public List<Prisustvo> getPrisustva() {
+    public ArrayList<Prisustvo> getPrisustva() {
         return prisustva;
     }
 
-    public void setPrisustva(List<Prisustvo> prisustva) {
+    public void setPrisustva(ArrayList<Prisustvo> prisustva) {
         this.prisustva = prisustva;
     }
 
@@ -121,11 +120,4 @@ public class Trening implements Serializable {
         }
         return true;
     }
-
-    @Override
-    public String toString() {
-        return "Trening{" + "idTrening=" + idTrening + ", datumVreme=" + datumVreme + ", trajanjeMin=" + trajanjeMin + ", opisTreninga=" + opisTreninga + ", grupa=" + grupa + ", prisustva=" + prisustva + '}';
-    }
-
-    
 }
