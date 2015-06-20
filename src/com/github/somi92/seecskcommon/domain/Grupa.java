@@ -7,6 +7,7 @@ package com.github.somi92.seecskcommon.domain;
 
 import com.github.somi92.sqldbb.annotations.Collection;
 import com.github.somi92.sqldbb.annotations.Column;
+import com.github.somi92.sqldbb.annotations.ForeignKey;
 import com.github.somi92.sqldbb.annotations.PrimaryKey;
 import com.github.somi92.sqldbb.annotations.Table;
 import java.io.Serializable;
@@ -32,6 +33,7 @@ public class Grupa implements Serializable {
 //    @Collection(childEntityClass = Clan.class, referencingField = "grupa")
     private List<Clan> clanovi;
     private List<Trening> treninzi;
+    @ForeignKey(column = "idKategorija", referencingTable = "Kategorija", referencingColumn = "idKategorija", isCollectionItem = false)
     private Kategorija kategorija;
 
     public Grupa() {

@@ -5,6 +5,9 @@
  */
 package com.github.somi92.seecskcommon.domain;
 
+import com.github.somi92.sqldbb.annotations.Column;
+import com.github.somi92.sqldbb.annotations.PrimaryKey;
+import com.github.somi92.sqldbb.annotations.Table;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -14,10 +17,15 @@ import java.util.Objects;
  *
  * @author milos
  */
+
+@Table("Kategorija")
 public class Kategorija implements Serializable {
     
+    @PrimaryKey("idKategorija")
     private long idKategorija;
+    @Column("naziv")
     private String nazivKategorije;
+    @Column("napomena")
     private String napomena;
     private List<Grupa> grupe;
 
@@ -95,7 +103,7 @@ public class Kategorija implements Serializable {
 
     @Override
     public String toString() {
-        return "Kategorija{" + "idKategorija=" + idKategorija + ", nazivKategorije=" + nazivKategorije + '}';
+        return nazivKategorije;
     }
     
     
